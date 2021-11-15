@@ -1,6 +1,8 @@
 import * as fs from 'fs'
 import yaml from 'js-yaml'
 
+const ALLOWED_EXTENSIONS = ['yml', 'yaml']
+
 /**
  * 
  * @param folder 
@@ -16,8 +18,12 @@ export default function load(folder: string) {
             r[p] = load(path)
         } else {
             const data = fs.readFileSync(path, 'utf-8')
-            const attrName = p.substr(0, p.lastIndexOf('.'))
-            r[attrName] = yaml.load(data)
+            const ext = p.substr(p.lastIndexOf('.'))
+            
+            if (ALLOWED_EXTENSIONS.includes(ext)) {                
+                const attrName = p.substr(0, p.lastIndexOf('.'))
+                r[attrName] = yaml.load(data)
+            }
         }
     }
     return r
