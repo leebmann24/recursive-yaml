@@ -26,12 +26,12 @@ jobs:
       run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_PUBLISH_TOKEN }}" > dist/.npmrc
 
     - name: cp package.json
-      run: cp package*.json dist/
+      run: cp package.json dist/
 
     - name: deploy
       run: |
         cd dist
-        ls -la
         npm install --production
         npm version
+        ls -la
         npm publish --access public
