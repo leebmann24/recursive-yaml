@@ -31,6 +31,7 @@ jobs:
     - name: deploy
       run: |
         cd dist
+        ls -la
         npm install --production
         npm version
         npm publish --access public
