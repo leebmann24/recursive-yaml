@@ -23,7 +23,7 @@ $ yarn add @leebmann24/recursive-yaml-loader
 
 ### example
 
-``` javascript
+``` typescript
 
 import loader from '@leebmann24/recursive-yaml-loader'
 
