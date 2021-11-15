@@ -33,4 +33,4 @@ jobs:
         cd dist
         npm install --production
         npm version
-        npm publish
+        npm publish --access public
