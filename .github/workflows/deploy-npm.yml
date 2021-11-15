@@ -29,4 +29,8 @@ jobs:
       run: cp package*.json dist/
 
     - name: deploy
-      run: cd dist && npm publish
+      run: |
+      cd dist
+      npm install --production
+      npm version
+      npm publish
