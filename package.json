@@ -1,6 +1,6 @@
 {
   "name": "@leebmann24/recursive-yaml-loader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "recursively loads yaml files from a given folder and merges it to a single json object",
   "main": "index.js",
   "repository": {

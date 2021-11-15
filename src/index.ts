@@ -18,8 +18,8 @@ export default function load(folder: string) {
             r[p] = load(path)
         } else {
             const data = fs.readFileSync(path, 'utf-8')
-            const ext = p.substr(p.lastIndexOf('.'))
-            
+            const ext = p.substr(p.lastIndexOf('.') + 1)
+
             if (ALLOWED_EXTENSIONS.includes(ext)) {                
                 const attrName = p.substr(0, p.lastIndexOf('.'))
                 r[attrName] = yaml.load(data)
