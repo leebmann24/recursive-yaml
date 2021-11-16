@@ -38,7 +38,4 @@ jobs:
       - name: publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GHCR_TOKEN }}
-        run: |
-          cp package.json dist/
-          cd dist
-          yarn publish
+        run: yarn publish
