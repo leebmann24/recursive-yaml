@@ -2,8 +2,7 @@ name: deploy on npmjs.com
 
 on:
   release:
-    types:
-      - "created"
+    types: ["published"]
 
 
 jobs:

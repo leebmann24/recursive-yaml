@@ -2,8 +2,7 @@ name: deploy on gcr.io
 
 on:
   release:
-    types:
-      - "created"
+    types: ["published"]
 
 jobs:
   release:
