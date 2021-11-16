@@ -27,15 +27,12 @@ jobs:
       run: npm t
 
     - name: security
-      if: ${{ steps.release.outputs.release_created }}
       run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_PUBLISH_TOKEN }}" > dist/.npmrc
 
     - name: cp package.json
-      if: ${{ steps.release.outputs.release_created }}
       run: cp package.json dist/
 
     - name: deploy npmjs.com
-      if: ${{ steps.release.outputs.release_created }}
       run: |
         cd dist
         npm install --production
