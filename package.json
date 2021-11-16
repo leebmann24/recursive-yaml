@@ -1,7 +1,7 @@
 {
   "name": "@leebmann24/recursive-yaml-loader",
-  "version": "1.0.3",
-  "description": "recursively loads yaml files from a given folder and merges it to a single json object",
+  "version": "1.0.4",
+  "description": "recursively loads yaml files from a given folder and it's subfolders. After that it merges everything into a single json object which will be returned.",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -11,7 +11,7 @@
     "build": "tsc -p tsconfig.build.json",
     "test": "jest"
   },
-  "keywords": [],
+  "keywords": ["Leebmann24", "yaml", "configuration", "config", "load", "recursive"],
   "author": "Bernhard Schönberger (bernhard.schoenberger@leebmann.de)",
   "license": "MIT",
   "dependencies": {
