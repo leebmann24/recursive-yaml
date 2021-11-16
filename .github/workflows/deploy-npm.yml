@@ -1,4 +1,4 @@
-name: NodeJS
+name: deploy on npmjs.com
 
 on:
   push:
