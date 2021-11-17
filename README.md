@@ -45,9 +45,25 @@ const config = loader.load('path/to/config/folder') as Config
 <br />
 <br />
 
-a file can be directly rendered as array if you use yaml list syntax without property naming:
-``` yaml
-- "value 1"
-- "value 2"
-- "value 3"
-```
+
+### parent/child combination
+a file with the same name as the folder in which it's in will be merged into its "parent"
+
+- *propXY* (folder) 
+  - *propXY.yml* (will NOT be encapsulated)
+    - hello: "world"
+  - *anotherProp.yml* (will be encapsulated)
+    - abc: "xyz"
+  
+
+
+```JSON
+{
+    "propXY": {
+        "hello": "world",
+        "anotherProp": {
+            "abc": "xyz"
+        }
+    }
+}
+ ``` 
