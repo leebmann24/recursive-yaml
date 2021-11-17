@@ -1,0 +1,6 @@
+./test
+./github
+./src
+
+*.md
+tsconfig*.json
