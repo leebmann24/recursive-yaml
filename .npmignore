@@ -1,6 +1,9 @@
-./test
-./github
-./src
+.github
+.npmrc
+
+test
+src
 
 *.md
 tsconfig*.json
+jest.config.js
